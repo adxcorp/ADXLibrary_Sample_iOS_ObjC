@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yJq-Jd-mLB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ADXLibrarySample-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iwJ-YQ-edC"/>
+                        <viewControllerLayoutGuide type="bottom" id="7qR-AG-2Kg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLh-2e-JaS">
+                                <rect key="frame" x="112.5" y="184" width="150" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ZQW-0i-CNy"/>
+                                    <constraint firstAttribute="height" constant="40" id="il9-Wz-x94"/>
+                                </constraints>
+                                <state key="normal" title="Interstitial">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3WM-0o-P9w" kind="show" id="PQd-wt-AMN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gh8-7C-ret">
+                                <rect key="frame" x="112.5" y="324" width="150" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="L7i-L4-ODL"/>
+                                    <constraint firstAttribute="height" constant="40" id="MtE-EP-OhE"/>
+                                </constraints>
+                                <state key="normal" title="NativeAdPlacer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1g9-qa-Oy0" kind="show" id="vQI-La-tBC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrs-Gk-rYb">
+                                <rect key="frame" x="112.5" y="114" width="150" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="38y-Om-cFO"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="aXg-UY-ruj"/>
+                                </constraints>
+                                <state key="normal" title="Banner">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="adi-Zn-q0g" kind="show" id="wKm-zf-KvW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqY-ds-Uik">
+                                <rect key="frame" x="112" y="254" width="150" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="c9m-qh-YIk"/>
+                                    <constraint firstAttribute="height" constant="40" id="xrU-qe-Lgq"/>
+                                </constraints>
+                                <state key="normal" title="NativeAdView">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qz1-xU-Y1b" kind="show" id="7Pk-gG-Rgv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yj-jd-RPv">
+                                <rect key="frame" x="112" y="394" width="150" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Ja1-Nf-Ja3"/>
+                                    <constraint firstAttribute="height" constant="40" id="UJX-zd-m0S"/>
+                                </constraints>
+                                <state key="normal" title="AppWall">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XN2-fG-2EI" kind="show" id="flN-cz-Xgp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWe-pG-lu2">
+                                <rect key="frame" x="112" y="464" width="150" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="htg-VK-SX2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="kIZ-5f-Xpp"/>
+                                </constraints>
+                                <state key="normal" title="Rewarded Video">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Kja-ja-yno" kind="show" id="Sfk-eC-4ca"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyT-u3-s0C">
+                                <rect key="frame" x="112" y="534" width="150" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="157-Ta-n2w"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="k3D-ic-E82"/>
+                                </constraints>
+                                <state key="normal" title="Rewarded (AdMob)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BNr-Ey-TAk" kind="show" id="y0Z-gL-g2z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gh8-7C-ret" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2LR-fl-tJ1"/>
+                            <constraint firstItem="tLh-2e-JaS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8od-4f-ad2"/>
+                            <constraint firstItem="9yj-jd-RPv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ChE-Vc-gl5"/>
+                            <constraint firstItem="gh8-7C-ret" firstAttribute="top" secondItem="qqY-ds-Uik" secondAttribute="bottom" constant="30" id="EOq-Q7-eH7"/>
+                            <constraint firstItem="Zrs-Gk-rYb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cOB-s7-2Ys"/>
+                            <constraint firstItem="tLh-2e-JaS" firstAttribute="top" secondItem="Zrs-Gk-rYb" secondAttribute="bottom" constant="30" id="dQz-UL-ch1"/>
+                            <constraint firstItem="XWe-pG-lu2" firstAttribute="top" secondItem="9yj-jd-RPv" secondAttribute="bottom" constant="30" id="htL-FA-9kU"/>
+                            <constraint firstItem="qqY-ds-Uik" firstAttribute="top" secondItem="tLh-2e-JaS" secondAttribute="bottom" constant="30" id="liD-yM-nqD"/>
+                            <constraint firstItem="EyT-u3-s0C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nKa-zX-0v2"/>
+                            <constraint firstItem="qqY-ds-Uik" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nSR-wu-J1D"/>
+                            <constraint firstItem="XWe-pG-lu2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rA0-hC-S4Z"/>
+                            <constraint firstItem="EyT-u3-s0C" firstAttribute="top" secondItem="XWe-pG-lu2" secondAttribute="bottom" constant="30" id="rC6-aR-UDo"/>
+                            <constraint firstItem="Zrs-Gk-rYb" firstAttribute="top" secondItem="iwJ-YQ-edC" secondAttribute="bottom" constant="50" id="tuZ-3T-fMh"/>
+                            <constraint firstItem="9yj-jd-RPv" firstAttribute="top" secondItem="gh8-7C-ret" secondAttribute="bottom" constant="30" id="zvq-e9-VG2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ADXLibrarySample" id="gK0-Gg-aSR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504.80000000000001" y="104.7976011994003"/>
+        </scene>
+        <!--Banner-->
+        <scene sceneID="KgD-Uu-VSH">
+            <objects>
+                <viewController title="Banner" id="adi-Zn-q0g" customClass="ADXBannerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pqm-Zl-bkH"/>
+                        <viewControllerLayoutGuide type="bottom" id="n8N-ct-tZy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W5U-C0-4Hd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94084163229999995" green="0.93933409680000002" blue="0.9656669873" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RoY-VS-9kW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1284" y="-573.46326836581716"/>
+        </scene>
+        <!--FullScreen-->
+        <scene sceneID="387-uE-IxM">
+            <objects>
+                <viewController title="FullScreen" id="3WM-0o-P9w" customClass="ADXFullScreenViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CL1-WW-Dbw"/>
+                        <viewControllerLayoutGuide type="bottom" id="jre-di-Fy0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WAN-ca-Jyx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAa-EG-KKi">
+                                <rect key="frame" x="112.5" y="313.5" width="150" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1dz-mk-LSS"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="rky-DZ-jWM"/>
+                                </constraints>
+                                <state key="normal" title="ShowAd">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectShowAd:" destination="3WM-0o-P9w" eventType="touchUpInside" id="egc-ZW-wzb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uAa-EG-KKi" firstAttribute="centerY" secondItem="WAN-ca-Jyx" secondAttribute="centerY" id="f4G-rb-r6N"/>
+                            <constraint firstItem="uAa-EG-KKi" firstAttribute="centerX" secondItem="WAN-ca-Jyx" secondAttribute="centerX" id="mkj-1i-Npq"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2X-Vs-1ZM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1284" y="112"/>
+        </scene>
+        <!--NativeAd-->
+        <scene sceneID="jSj-7a-cCy">
+            <objects>
+                <viewController title="NativeAd" id="qz1-xU-Y1b" customClass="ADXNativeAdViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="luV-J9-Zeg"/>
+                        <viewControllerLayoutGuide type="bottom" id="6mB-O5-awM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mr8-Kc-8cJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqO-oi-Dfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1284" y="888"/>
+        </scene>
+        <!--Ad Mob Reward View Controller-->
+        <scene sceneID="dZh-Sq-73N">
+            <objects>
+                <viewController id="BNr-Ey-TAk" customClass="ADXAdMobRewardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9pa-fO-tXD"/>
+                        <viewControllerLayoutGuide type="bottom" id="ddQ-r4-lyh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g43-GZ-twp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="84a-1T-O8O">
+                                <rect key="frame" x="112.5" y="313.5" width="150" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="1D0-2G-r1R"/>
+                                    <constraint firstAttribute="height" constant="40" id="hX5-4k-PtK"/>
+                                </constraints>
+                                <state key="normal" title="ShowAd">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectShowAd:" destination="BNr-Ey-TAk" eventType="touchUpInside" id="H8d-II-vcN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="84a-1T-O8O" firstAttribute="centerY" secondItem="g43-GZ-twp" secondAttribute="centerY" id="7xs-DT-QBg"/>
+                            <constraint firstItem="84a-1T-O8O" firstAttribute="centerX" secondItem="g43-GZ-twp" secondAttribute="centerX" id="uMf-Gf-bt3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIG-u7-yEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1516" y="887"/>
+        </scene>
+        <!--Reward View Controller-->
+        <scene sceneID="yR1-fN-chw">
+            <objects>
+                <viewController id="Kja-ja-yno" customClass="ADXRewardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ign-OX-PC1"/>
+                        <viewControllerLayoutGuide type="bottom" id="dUY-9v-pnw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ih2-d8-Agk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRo-OM-OIO">
+                                <rect key="frame" x="112" y="313.5" width="150" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="UIl-LV-YXt"/>
+                                    <constraint firstAttribute="height" constant="40" id="oGY-ht-eUb"/>
+                                </constraints>
+                                <state key="normal" title="ShowAd">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectShowAd:" destination="Kja-ja-yno" eventType="touchUpInside" id="ySu-bz-NID"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FRo-OM-OIO" firstAttribute="centerX" secondItem="ih2-d8-Agk" secondAttribute="centerX" id="kbv-5e-15k"/>
+                            <constraint firstItem="FRo-OM-OIO" firstAttribute="centerY" secondItem="ih2-d8-Agk" secondAttribute="centerY" id="mgD-Iy-HYJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFR-oY-IUp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-818" y="887"/>
+        </scene>
+        <!--App Wall View Controller-->
+        <scene sceneID="RMj-Fr-b13">
+            <objects>
+                <viewController id="XN2-fG-2EI" customClass="ADXAppWallViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vNJ-MP-e06"/>
+                        <viewControllerLayoutGuide type="bottom" id="YUK-wk-rW3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sqv-DA-ZKO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QX9-y4-F2t">
+                                <rect key="frame" x="112.5" y="313" width="150" height="40"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="CXh-2C-3YE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="ORT-ET-FZu"/>
+                                </constraints>
+                                <state key="normal" title="ShowAd">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectShowAd:" destination="XN2-fG-2EI" eventType="touchUpInside" id="bRI-ZQ-LsU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QX9-y4-F2t" firstAttribute="centerX" secondItem="Sqv-DA-ZKO" secondAttribute="centerX" id="CtI-dH-ig0"/>
+                            <constraint firstItem="QX9-y4-F2t" firstAttribute="centerY" secondItem="Sqv-DA-ZKO" secondAttribute="centerY" id="hxX-On-7sK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8LI-hV-rfO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164" y="887"/>
+        </scene>
+        <!--NativeAdPlacer-->
+        <scene sceneID="xvm-J9-s0p">
+            <objects>
+                <viewController title="NativeAdPlacer" id="1g9-qa-Oy0" customClass="ADXNativeAdPlacerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cy0-3V-z0c"/>
+                        <viewControllerLayoutGuide type="bottom" id="kBO-Fn-zIb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F2V-UV-NLw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u2k-ZD-YKl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.9408416322760832" green="0.93933409675123791" blue="0.96566698732797929" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e3S-UH-ohV">
+                                    <size key="itemSize" width="375" height="110"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCell" id="yjt-mf-UNF">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4rn-oC-cvU">
+                                                    <rect key="frame" x="10" y="10" width="160" height="90"/>
+                                                    <color key="backgroundColor" red="0.82167528150000002" green="0.94466483160000003" blue="0.91393346090000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="ya0-25-xee"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxU-uE-UoS">
+                                                    <rect key="frame" x="180" y="10" width="185" height="50"/>
+                                                    <string key="text">includes a variety of optional callbacks tthat you can use to be notified of events, e.g. when an interstitial has successfully loaded, or when an interstitial is about to appear.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmb-aM-pUf">
+                                                    <rect key="frame" x="180" y="70" width="87.5" height="30"/>
+                                                    <color key="backgroundColor" red="0.6639387725" green="0.61908722090000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="7Vh-hZ-3sn"/>
+                                                    </constraints>
+                                                    <state key="normal" title="버튼">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlR-Sp-mrj">
+                                                    <rect key="frame" x="277.5" y="70" width="87.5" height="30"/>
+                                                    <color key="backgroundColor" red="0.6639387725" green="0.61908722090000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="bsx-mS-Pfe"/>
+                                                    </constraints>
+                                                    <state key="normal" title="버튼">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="4rn-oC-cvU" secondAttribute="bottom" constant="10" id="5WK-NC-dMF"/>
+                                            <constraint firstAttribute="trailing" secondItem="gxU-uE-UoS" secondAttribute="trailing" constant="10" id="82g-sP-ajh"/>
+                                            <constraint firstItem="vmb-aM-pUf" firstAttribute="leading" secondItem="4rn-oC-cvU" secondAttribute="trailing" constant="10" id="ECz-mu-SyZ"/>
+                                            <constraint firstItem="MlR-Sp-mrj" firstAttribute="width" secondItem="vmb-aM-pUf" secondAttribute="width" id="OBv-aD-PfC"/>
+                                            <constraint firstItem="vmb-aM-pUf" firstAttribute="top" secondItem="gxU-uE-UoS" secondAttribute="bottom" constant="10" id="QXf-y0-gBT"/>
+                                            <constraint firstItem="4rn-oC-cvU" firstAttribute="top" secondItem="yjt-mf-UNF" secondAttribute="top" constant="10" id="Uqn-BI-fg4"/>
+                                            <constraint firstItem="gxU-uE-UoS" firstAttribute="leading" secondItem="4rn-oC-cvU" secondAttribute="trailing" constant="10" id="WZN-MK-gFE"/>
+                                            <constraint firstAttribute="bottom" secondItem="MlR-Sp-mrj" secondAttribute="bottom" constant="10" id="Wfy-3n-j6A"/>
+                                            <constraint firstAttribute="trailing" secondItem="MlR-Sp-mrj" secondAttribute="trailing" constant="10" id="bQA-iy-z3m"/>
+                                            <constraint firstItem="gxU-uE-UoS" firstAttribute="top" secondItem="yjt-mf-UNF" secondAttribute="top" constant="10" id="blP-QP-r5Q"/>
+                                            <constraint firstItem="4rn-oC-cvU" firstAttribute="leading" secondItem="yjt-mf-UNF" secondAttribute="leading" constant="10" id="pga-fi-c1d"/>
+                                            <constraint firstItem="MlR-Sp-mrj" firstAttribute="leading" secondItem="vmb-aM-pUf" secondAttribute="trailing" constant="10" id="r6c-XY-epY"/>
+                                            <constraint firstAttribute="bottom" secondItem="vmb-aM-pUf" secondAttribute="bottom" constant="10" id="vrf-Kp-Qcz"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="1g9-qa-Oy0" id="cKD-3V-jbc"/>
+                                    <outlet property="delegate" destination="1g9-qa-Oy0" id="t26-Wv-BPN"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kBO-Fn-zIb" firstAttribute="top" secondItem="u2k-ZD-YKl" secondAttribute="bottom" id="7Dn-r0-48Q"/>
+                            <constraint firstAttribute="trailing" secondItem="u2k-ZD-YKl" secondAttribute="trailing" id="KnO-TN-5wn"/>
+                            <constraint firstItem="u2k-ZD-YKl" firstAttribute="leading" secondItem="F2V-UV-NLw" secondAttribute="leading" id="NbK-0V-Ovp"/>
+                            <constraint firstItem="u2k-ZD-YKl" firstAttribute="top" secondItem="cy0-3V-z0c" secondAttribute="bottom" id="fVL-8q-aup"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mainCollectionView" destination="u2k-ZD-YKl" id="Mpb-cM-jz3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sIN-Se-UW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="505" y="887"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yIg-eP-WSM">
+            <objects>
+                <navigationController id="yJq-Jd-mLB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TNW-7R-4gB">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xtQ-CE-OJI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pwo-Wl-nHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-212" y="112"/>
+        </scene>
+    </scenes>
+</document>

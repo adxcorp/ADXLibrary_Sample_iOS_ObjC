@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  ADXLibrary_iOSSample
+//
+//  Created by Eleanor Choi on 2018. 1. 29..
+//  Copyright © 2018년 Eleanor Choi. All rights reserved.
+//
+
+#define NSLog( s, ... ) NSLog( @"[ADX] : %s:(%d) %@",__PRETTY_FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+
+#define NATIVE_AD_UNIT_ID           @"9ab55b93573b43869da0c47bd0780cd1"
+#define BANNER_AD_UNIT_ID           @"a9bcfae03030442da3ed277aff98713c"
+#define INTERSTITIAL_AD_UNIT_ID     @"f6110c24fa8a4daf9c6159f5ea181e7d"
+#define REWARDEDVIDEO_AD_UNIT_ID    @"756f6366d71f4bef88ae55c5ac13ac36"
