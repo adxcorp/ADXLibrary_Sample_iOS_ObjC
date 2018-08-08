@@ -44,6 +44,7 @@
 #pragma mark - NativeAdFactoryDelegate
 
 - (void)onSuccess:(NSString *)adUnitId nativeAd:(MPNativeAd *)nativeAd {
+    NSLog(@"onSuccess : %@", adUnitId);
     
     if([adUnitId isEqualToString:NATIVE_AD_UNIT_ID]) {
         self.nativeAd = nativeAd;
@@ -55,7 +56,6 @@
                                         100.0,
                                         [UIScreen mainScreen].bounds.size.width,
                                         270.0);
-        
         [self.view addSubview:nativeAdView];
     }
 }
@@ -65,19 +65,8 @@
     
 }
 
-- (void)willPresentModalForNativeAd:(MPNativeAd *)nativeAd {
-
-}
-
-- (void)didDismissModalForNativeAd:(MPNativeAd *)nativeAd {
-
-}
-
-- (void)willLeaveApplicationFromNativeAd:(MPNativeAd *)nativeAd {
-
-}
-
 - (UIViewController *)viewControllerForPresentingModalView {
+    NSLog(@"");
     return self;
 }
 

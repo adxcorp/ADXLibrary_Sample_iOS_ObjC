@@ -8,7 +8,6 @@
 
 #import "ADXAdMobRewardViewController.h"
 #import <ADXGDPR.h>
-#import <VungleAdNetworkExtras.h>
 
 @import GoogleMobileAds;
 
@@ -21,15 +20,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+
     [GADRewardBasedVideoAd sharedInstance].delegate = self;
     [self loadAdAdMob];
-    
+
 }
 
 - (void)loadAdAdMob {
     GADRequest *request = [GADRequest request];
-    
+
     //*** GDPR
     if ([ADXGDPR.sharedInstance getConsentState] == ADXConsentStateDenied) {
         GADExtras *extras = [[GADExtras alloc] init];
@@ -42,7 +41,7 @@
 }
 
 - (IBAction)selectShowAd:(id)sender {
-    
+
     if ([[GADRewardBasedVideoAd sharedInstance] isReady]) {
         NSLog(@"isReady");
         [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:self];
