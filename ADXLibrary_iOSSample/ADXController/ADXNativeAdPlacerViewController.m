@@ -9,7 +9,7 @@
 #import "ADXNativeAdPlacerViewController.h"
 #import <MPCollectionViewAdPlacer.h>
 #import "NativeAdView.h"
-#import <NativeAdFactory.h>
+#import <ADXLibrary/NativeAdFactory.h>
 #import <MPNativeAd.h>
 
 @interface ADXNativeAdPlacerViewController () <UICollectionViewDataSource, UICollectionViewDelegate, MPCollectionViewAdPlacerDelegate>

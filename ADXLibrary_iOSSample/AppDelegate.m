@@ -7,10 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import <NativeAdFactory.h>
 #import "NativeAdView.h"
-
-#import <ADXGDPR.h>
+#import <ADXLibrary/ADXLibrary.h>
+#import <MoPub.h>
 
 @import GoogleMobileAds;
 
@@ -23,8 +22,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [GADMobileAds configureWithApplicationID:@"ca-app-pub-7466439784264697~7972777801"];
-    
     MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:BANNER_AD_UNIT_ID];
     [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig
                                                 completion:^{
@@ -33,6 +30,9 @@
                                                                                              renderingViewClass:[NativeAdView class]];
                                                     }];
                                                 }];
+    
+    [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
+    
     return YES;
 }
 

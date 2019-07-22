@@ -7,7 +7,7 @@
 //
 
 #import "ADXNativeAdViewController.h"
-#import <NativeAdFactory.h>
+#import <ADXLibrary/ADXLibrary.h>
 #import <MPNativeAd.h>
 #import "NativeAdView.h"
 

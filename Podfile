@@ -1,5 +1,7 @@
+source 'https://adx-developer:developer2017@github.com/adxcorp/AdxLibrary_iOS_Release.git'
+source 'https://github.com/CocoaPods/Specs.git'
 # Uncomment the next line to define a global platform for your project
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 target 'ADXLibrary_iOSSample' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -7,7 +9,6 @@ target 'ADXLibrary_iOSSample' do
 
   # Pods for ADXLibrary_iOSSample
 
- pod 'ADXLibrary', :git => 'https://please:contact@github.com/adxcorp/ADXLibrary_iOS.git', :tag => '1.5.5'
- pod 'mopub-ios-sdk', :git => 'https://please:contact@github.com/adxcorp/mopub-ios-sdk.git', :tag => '5.2.0.3'
+  pod 'ADXLibrary', '1.5.18'
 
 end

@@ -7,7 +7,7 @@
 //
 
 #import "ADXAdMobRewardViewController.h"
-#import <ADXGDPR.h>
+#import <ADXLibrary/ADXGDPR.h>
 
 @import GoogleMobileAds;
 

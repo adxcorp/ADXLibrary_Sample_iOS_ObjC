@@ -7,7 +7,7 @@
 //
 
 #import "ADXAppWallViewController.h"
-#import <AppWallFactory.h>
+//#import <AdXLibrary/AppWallFactory.h>
 
 @interface ADXAppWallViewController ()
 
@@ -18,13 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [AppWallFactory init:@"100740" adUnitId:@"34458"];
-    [AppWallFactory preloadAppWall];
+
+//    [AppWallFactory init:@"100740" adUnitId:@"34458"];
+//    [AppWallFactory preloadAppWall];
 }
 - (IBAction)selectShowAd:(id)sender {
-    
-    [AppWallFactory showAppWall:self];
+
+//    [AppWallFactory showAppWall:self];
 }
 
 - (void)didReceiveMemoryWarning {
