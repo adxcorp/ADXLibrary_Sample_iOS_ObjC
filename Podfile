@@ -9,6 +9,10 @@ target 'ADXLibrary_iOSSample' do
 
   # Pods for ADXLibrary_iOSSample
 
-  pod 'ADXLibrary', '1.5.18'
+  pod 'ADXLibrary', '1.6.0'
+  pod 'ADXLibrary-AdFit', '1.6.0'
+  pod 'ADXLibrary-UnityAds', '1.6.0'
+  pod 'ADXLibrary-Vungle', '1.6.0'
+  pod 'ADXLibrary-AdColony', '1.6.0'
 
 end
