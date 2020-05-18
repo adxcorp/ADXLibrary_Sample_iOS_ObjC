@@ -234,11 +234,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ADXLibrary_iOSSample/Pods-ADXLibrary_iOSSample-frameworks.sh",
-				"${PODS_ROOT}/AdFitSDK/Frameworks/AdFitSDK.framework",
+				"${PODS_ROOT}/ADXLibrary/ios/FBAudienceNetwork.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AdFitSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBAudienceNetwork.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
