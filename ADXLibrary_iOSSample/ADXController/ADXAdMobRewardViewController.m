@@ -11,7 +11,9 @@
 
 @import GoogleMobileAds;
 
-@interface ADXAdMobRewardViewController () <GADRewardBasedVideoAdDelegate>
+@interface ADXAdMobRewardViewController () <GADRewardedAdDelegate>
+
+@property(nonatomic, strong) GADRewardedAd *rewardedAd;
 
 @end
 
@@ -21,72 +23,62 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    [GADRewardBasedVideoAd sharedInstance].delegate = self;
-    [self loadAdAdMob];
+    self.rewardedAd = [self createAndLoadRewardedAd];
 
-}
-
-- (void)loadAdAdMob {
-    GADRequest *request = [GADRequest request];
-
-    //*** GDPR
-    if ([ADXGDPR.sharedInstance getConsentState] == ADXConsentStateDenied) {
-        GADExtras *extras = [[GADExtras alloc] init];
-        extras.additionalParameters = @{@"npa": @"1"};
-        [request registerAdNetworkExtras:extras];
-    }
-    request.testDevices = @[ @"e527e0336ebd9354411d932aa50910ca" ];
-    [[GADRewardBasedVideoAd sharedInstance] loadRequest:request
-                                           withAdUnitID:@"ca-app-pub-7466439784264697/6572954274"];
 }
 
 - (IBAction)selectShowAd:(id)sender {
-
-    if ([[GADRewardBasedVideoAd sharedInstance] isReady]) {
-        NSLog(@"isReady");
-        [[GADRewardBasedVideoAd sharedInstance] presentFromRootViewController:self];
+    if (self.rewardedAd.isReady) {
+      [self.rewardedAd presentFromRootViewController:self delegate:self];
     } else {
-        NSLog(@"isNOTReady");
-        [self loadAdAdMob];
+      NSLog(@"Ad wasn't ready");
+      self.rewardedAd = [self createAndLoadRewardedAd];
     }
 }
 
-#pragma mark - GADRewardBasedVideoAdDelegate
-
-- (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd didRewardUserWithReward:(GADAdReward *)reward {
-    NSString *rewardMessage = [NSString stringWithFormat:@"Reward received %@ , amount %lf"
-                               , rewardBasedVideoAd.adNetworkClassName
-                               , [reward.amount doubleValue]];
-    NSLog(@"rewardMessage : %@", rewardMessage);
+- (GADRewardedAd *)createAndLoadRewardedAd {
+  GADRewardedAd *rewardedAd = [[GADRewardedAd alloc]
+      initWithAdUnitID:@"ca-app-pub-7466439784264697/6572954274"];
+                               
+  GADRequest *request = [GADRequest request];
+  //*** GDPR
+  if ([ADXGDPR.sharedInstance getConsentState] == ADXConsentStateDenied) {
+        GADExtras *extras = [[GADExtras alloc] init];
+        extras.additionalParameters = @{@"npa": @"1"};
+        [request registerAdNetworkExtras:extras];
+  }
+    
+  [rewardedAd loadRequest:request completionHandler:^(GADRequestError * _Nullable error) {
+    if (error) {
+      // Handle ad failed to load case.
+    } else {
+      // Ad successfully loaded.
+    }
+  }];
+  return rewardedAd;
 }
 
-- (void)rewardBasedVideoAdDidReceiveAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    NSLog(@"Reward based video ad is received.[%@]", rewardBasedVideoAd.adNetworkClassName);
+/// Tells the delegate that the user earned a reward.
+- (void)rewardedAd:(GADRewardedAd *)rewardedAd userDidEarnReward:(GADAdReward *)reward {
+  // TODO: Reward the user.
+  NSLog(@"rewardedAd:userDidEarnReward:");
 }
 
-- (void)rewardBasedVideoAdDidOpen:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    NSLog(@"Opened reward based video ad. [%@]", rewardBasedVideoAd.adNetworkClassName);
+/// Tells the delegate that the rewarded ad was presented.
+- (void)rewardedAdDidPresent:(GADRewardedAd *)rewardedAd {
+  NSLog(@"rewardedAdDidPresent:");
 }
 
-- (void)rewardBasedVideoAdDidStartPlaying:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    NSLog(@"Reward based video ad started playing.[%@]", rewardBasedVideoAd.adNetworkClassName);
+/// Tells the delegate that the rewarded ad failed to present.
+- (void)rewardedAd:(GADRewardedAd *)rewardedAd didFailToPresentWithError:(NSError *)error {
+  NSLog(@"rewardedAd:didFailToPresentWithError");
 }
 
-- (void)rewardBasedVideoAdDidCompletePlaying:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    NSLog(@"Reward based video ad has completed. [%@]", rewardBasedVideoAd.adNetworkClassName);
-}
-
-- (void)rewardBasedVideoAdDidClose:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    NSLog(@"Reward based video ad is closed. [%@]", rewardBasedVideoAd.adNetworkClassName);
-}
-
-- (void)rewardBasedVideoAdWillLeaveApplication:(GADRewardBasedVideoAd *)rewardBasedVideoAd {
-    NSLog(@"Reward based video ad will leave application. [%@]", rewardBasedVideoAd.adNetworkClassName);
-}
-
-- (void)rewardBasedVideoAd:(GADRewardBasedVideoAd *)rewardBasedVideoAd
-    didFailToLoadWithError:(NSError *)error {
-    NSLog(@"Reward based video ad failed to load. [%@]", rewardBasedVideoAd.adNetworkClassName);
+/// Tells the delegate that the rewarded ad was dismissed.
+- (void)rewardedAdDidDismiss:(GADRewardedAd *)rewardedAd {
+  NSLog(@"rewardedAdDidDismiss:");
+    
+  self.rewardedAd = [self createAndLoadRewardedAd];
 }
 
 #pragma mark -
