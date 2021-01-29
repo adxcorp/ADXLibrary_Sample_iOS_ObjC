@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		508AA02C62ED642FB434DF4D /* libPods-ADXLibrary_iOSSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97217082AD3B496D0B3EC1F6 /* libPods-ADXLibrary_iOSSample.a */; };
+		A380B8402582236D00ED5D3C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A380B83F2582236D00ED5D3C /* File.swift */; };
 		FD032F7D201817350058794D /* ADXNativeAdPlacerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD032F7C201817350058794D /* ADXNativeAdPlacerViewController.m */; };
 		FD5CDD412016F97800969F15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5CDD402016F97800969F15 /* AppDelegate.m */; };
 		FD5CDD442016F97800969F15 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FD5CDD432016F97800969F15 /* ViewController.m */; };
@@ -29,6 +30,8 @@
 		3D3AAB757D2911744F3023F4 /* Pods-ADXLibrary_iOSSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADXLibrary_iOSSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ADXLibrary_iOSSample/Pods-ADXLibrary_iOSSample.debug.xcconfig"; sourceTree = "<group>"; };
 		6EA2C5596DF22EAACFF823B5 /* Pods-ADXLibrary_iOSSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADXLibrary_iOSSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ADXLibrary_iOSSample/Pods-ADXLibrary_iOSSample.release.xcconfig"; sourceTree = "<group>"; };
 		97217082AD3B496D0B3EC1F6 /* libPods-ADXLibrary_iOSSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ADXLibrary_iOSSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A380B83E2582236D00ED5D3C /* ADXLibrary_iOSSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ADXLibrary_iOSSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		A380B83F2582236D00ED5D3C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		FD032F7B201817350058794D /* ADXNativeAdPlacerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADXNativeAdPlacerViewController.h; sourceTree = "<group>"; };
 		FD032F7C201817350058794D /* ADXNativeAdPlacerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ADXNativeAdPlacerViewController.m; sourceTree = "<group>"; };
 		FD5CDD3C2016F97800969F15 /* ADXLibrary_iOSSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ADXLibrary_iOSSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,11 +94,13 @@
 		FD5CDD332016F97800969F15 = {
 			isa = PBXGroup;
 			children = (
+				A380B83F2582236D00ED5D3C /* File.swift */,
 				FD8A9087201F111800948996 /* PrefixHeader.pch */,
 				FD5CDD3E2016F97800969F15 /* ADXLibrary_iOSSample */,
 				FD5CDD3D2016F97800969F15 /* Products */,
 				5D8D77A711E5610A4416FF37 /* Pods */,
 				4D81C0C738D6813E4A1E8346 /* Frameworks */,
+				A380B83E2582236D00ED5D3C /* ADXLibrary_iOSSample-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,7 +173,6 @@
 				FD5CDD392016F97800969F15 /* Frameworks */,
 				FD5CDD3A2016F97800969F15 /* Resources */,
 				A1BD1784B2CE1AAB7ED67BB1 /* [CP] Copy Pods Resources */,
-				0798E015DF7EFB448C377E68 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +194,7 @@
 				TargetAttributes = {
 					FD5CDD3B2016F97800969F15 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1220;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -227,24 +232,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0798E015DF7EFB448C377E68 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ADXLibrary_iOSSample/Pods-ADXLibrary_iOSSample-frameworks.sh",
-				"${PODS_ROOT}/ADXLibrary/ios/FBAudienceNetwork.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBAudienceNetwork.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ADXLibrary_iOSSample/Pods-ADXLibrary_iOSSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		578AF6EE0138F4509A83C4D3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,49 +257,19 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ADXLibrary_iOSSample/Pods-ADXLibrary_iOSSample-resources.sh",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseBtn.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseBtn@2x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseBtn@3x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseButtonX.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseButtonX@2x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPCloseButtonX@3x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPDAAIcon.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPDAAIcon@2x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPDAAIcon@3x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPMutedBtn.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPMutedBtn@2x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPMutedBtn@3x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPPlayBtn.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPPlayBtn@2x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPPlayBtn@3x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPUnmutedBtn.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPUnmutedBtn@2x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPUnmutedBtn@3x.png",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MRAID.bundle",
-				"${PODS_ROOT}/mopub-ios-sdk/MoPubSDK/Resources/MPAdapters.plist",
+				"${PODS_ROOT}/ADXLibrary/MediationAdapter/ADXLibrary/Assets/biForIOs.png",
+				"${PODS_ROOT}/ADXLibrary/MediationAdapter/ADXLibrary/Assets/biForIOs@2x.png",
+				"${PODS_ROOT}/ADXLibrary/MediationAdapter/ADXLibrary/Assets/biForIOs@3x.png",
+				"${PODS_ROOT}/Bytedance-UnionAD/Bytedance-UnionAd/Frameworks/BUAdSDK.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/mopub-ios-sdk/MoPubResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseBtn@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPCloseButtonX@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPDAAIcon@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPMutedBtn.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPMutedBtn@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPMutedBtn@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPPlayBtn.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPPlayBtn@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPPlayBtn@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn@2x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn@3x.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MRAID.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPAdapters.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/biForIOs.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/biForIOs@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/biForIOs@3x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BUAdSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MoPubResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -327,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDC99B69201714A200E1D42D /* NativeAdView.m in Sources */,
+				A380B8402582236D00ED5D3C /* File.swift in Sources */,
 				FDC99B5E201709B900E1D42D /* ADXFullScreenViewController.m in Sources */,
 				FD90550320870FF000EDCF61 /* ADXAdMobRewardViewController.m in Sources */,
 				FD5CDD442016F97800969F15 /* ViewController.m in Sources */,
@@ -471,6 +429,7 @@
 			baseConfigurationReference = 3D3AAB757D2911744F3023F4 /* Pods-ADXLibrary_iOSSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AMNALPNZ69;
 				ENABLE_BITCODE = NO;
@@ -484,6 +443,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adxcorp.adxdev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ADXLibrary_iOSSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -493,6 +455,7 @@
 			baseConfigurationReference = 6EA2C5596DF22EAACFF823B5 /* Pods-ADXLibrary_iOSSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AMNALPNZ69;
 				ENABLE_BITCODE = NO;
@@ -506,6 +469,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.adxcorp.adxdev;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ADXLibrary_iOSSample-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

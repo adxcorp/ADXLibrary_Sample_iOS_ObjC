@@ -10,6 +10,8 @@
 #import "NativeAdView.h"
 #import <ADXLibrary/ADXLibrary.h>
 #import <MoPub.h>
+#import <FBAudienceNetwork/FBAudienceNetwork.h>
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
 
 @import GoogleMobileAds;
 
@@ -22,18 +24,40 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:BANNER_AD_UNIT_ID];
-    [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig
-                                                completion:^{
-                                                    [ADXGDPR.sharedInstance showADXConsent:^(ADXConsentState consentState, BOOL success) {
-                                                        [[NativeAdFactory sharedInstance] setRenderingViewClass:NATIVE_AD_UNIT_ID
-                                                                                             renderingViewClass:[NativeAdView class]];
-                                                    }];
-                                                }];
-    
-    [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
+    if (@available(iOS 14, *)) {
+        // ATT 알림을 통한 권한 요청
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+
+            // 광고추적제한 설정 (페이스북 광고)
+            if (ATTrackingManager.trackingAuthorizationStatus == ATTrackingManagerAuthorizationStatusAuthorized ||
+               (ATTrackingManager.trackingAuthorizationStatus == ATTrackingManagerAuthorizationStatusNotDetermined)) {
+                [FBAdSettings setAdvertiserTrackingEnabled:YES];
+            } else {
+                [FBAdSettings setAdvertiserTrackingEnabled:NO];
+            }
+            
+            // 광고 SDK 초기화
+            [self initializeAdSdk];
+        }];
+    } else {
+        // 광고 SDK 초기화
+        [self initializeAdSdk];
+    }
     
     return YES;
+}
+
+- (void) initializeAdSdk {
+    MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:BANNER_AD_UNIT_ID];
+    [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig
+                                            completion:^{
+        [ADXGDPR.sharedInstance showADXConsent:^(ADXConsentState consentState, BOOL success) {
+            [[NativeAdFactory sharedInstance] setRenderingViewClass:NATIVE_AD_UNIT_ID
+                                                 renderingViewClass:[NativeAdView class]];
+        }];
+    }];
+    
+    [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
 }
 
 

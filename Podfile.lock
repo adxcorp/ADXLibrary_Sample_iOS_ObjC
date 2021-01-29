@@ -1,0 +1,136 @@
+PODS:
+  - AdPieSDK (1.2.8)
+  - ADXLibrary (1.8.5):
+    - AdPieSDK (= 1.2.8)
+    - Google-Mobile-Ads-SDK (= 7.69.0)
+    - IronSourceSDK (= 7.0.4.0)
+    - mopub-ios-sdk (= 5.15.0)
+  - ADXLibrary-Cauly (1.8.5):
+    - Google-Mobile-Ads-SDK (= 7.69.0)
+    - mopub-ios-sdk (= 5.15.0)
+  - ADXLibrary-FBAudienceNetwork (1.8.5):
+    - ADXLibrary-FBAudienceNetwork/Default (= 1.8.5)
+    - Google-Mobile-Ads-SDK (= 7.69.0)
+    - mopub-ios-sdk (= 5.15.0)
+  - ADXLibrary-FBAudienceNetwork/Default (1.8.5):
+    - FBAudienceNetwork (= 6.2.1)
+    - Google-Mobile-Ads-SDK (= 7.69.0)
+    - mopub-ios-sdk (= 5.15.0)
+  - ADXLibrary-Pangle (1.8.5):
+    - Bytedance-UnionAD (= 3.3.6.2)
+    - Google-Mobile-Ads-SDK (= 7.69.0)
+    - mopub-ios-sdk (= 5.15.0)
+  - ADXLibrary-UnityAds (1.8.5):
+    - Google-Mobile-Ads-SDK (= 7.69.0)
+    - mopub-ios-sdk (= 5.15.0)
+    - UnityAds (= 3.6.0)
+  - ADXLibrary-Vungle (1.8.5):
+    - Google-Mobile-Ads-SDK (= 7.69.0)
+    - mopub-ios-sdk (= 5.15.0)
+    - VungleSDK-iOS (= 6.8.1)
+  - Bytedance-UnionAD (3.3.6.2)
+  - FBAudienceNetwork (6.2.1):
+    - FBSDKCoreKit/Basics (>= 7.0.1)
+  - FBSDKCoreKit/Basics (9.0.0)
+  - Google-Mobile-Ads-SDK (7.69.0):
+    - GoogleAppMeasurement (~> 7.0)
+    - GoogleUserMessagingPlatform (~> 1.1)
+  - GoogleAppMeasurement (7.5.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.0)
+    - GoogleUtilities/MethodSwizzler (~> 7.0)
+    - GoogleUtilities/Network (~> 7.0)
+    - "GoogleUtilities/NSData+zlib (~> 7.0)"
+    - nanopb (~> 2.30907.0)
+  - GoogleUserMessagingPlatform (1.4.0)
+  - GoogleUtilities/AppDelegateSwizzler (7.2.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (7.2.0):
+    - PromisesObjC (~> 1.2)
+  - GoogleUtilities/Logger (7.2.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (7.2.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (7.2.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.2.0)"
+  - GoogleUtilities/Reachability (7.2.0):
+    - GoogleUtilities/Logger
+  - IronSourceSDK (7.0.4.0)
+  - mopub-ios-sdk (5.15.0):
+    - mopub-ios-sdk/MoPubSDK (= 5.15.0)
+  - mopub-ios-sdk/Core (5.15.0)
+  - mopub-ios-sdk/MoPubSDK (5.15.0):
+    - mopub-ios-sdk/Core
+    - mopub-ios-sdk/NativeAds
+  - mopub-ios-sdk/NativeAds (5.15.0):
+    - mopub-ios-sdk/Core
+  - nanopb (2.30907.0):
+    - nanopb/decode (= 2.30907.0)
+    - nanopb/encode (= 2.30907.0)
+  - nanopb/decode (2.30907.0)
+  - nanopb/encode (2.30907.0)
+  - PromisesObjC (1.2.12)
+  - UnityAds (3.6.0)
+  - VungleSDK-iOS (6.8.1)
+
+DEPENDENCIES:
+  - ADXLibrary (= 1.8.5)
+  - ADXLibrary-Cauly (= 1.8.5)
+  - ADXLibrary-FBAudienceNetwork (= 1.8.5)
+  - ADXLibrary-Pangle (= 1.8.5)
+  - ADXLibrary-UnityAds (= 1.8.5)
+  - ADXLibrary-Vungle (= 1.8.5)
+
+SPEC REPOS:
+  https://github.com/adxcorp/AdxLibrary_iOS_Release.git:
+    - ADXLibrary
+    - ADXLibrary-Cauly
+    - ADXLibrary-FBAudienceNetwork
+    - ADXLibrary-Pangle
+    - ADXLibrary-UnityAds
+    - ADXLibrary-Vungle
+  https://github.com/CocoaPods/Specs.git:
+    - AdPieSDK
+    - Bytedance-UnionAD
+    - FBAudienceNetwork
+    - FBSDKCoreKit
+    - Google-Mobile-Ads-SDK
+    - GoogleAppMeasurement
+    - GoogleUserMessagingPlatform
+    - GoogleUtilities
+    - IronSourceSDK
+    - mopub-ios-sdk
+    - nanopb
+    - PromisesObjC
+    - UnityAds
+    - VungleSDK-iOS
+
+SPEC CHECKSUMS:
+  AdPieSDK: 7697c16b9a7166c04f096fded355969e55f4be8e
+  ADXLibrary: 38b9e6e1ae52aef3efae2aabb06733e464f1f8b5
+  ADXLibrary-Cauly: 3d17bca4e41bc2ae23aa39e196a1a73389d329fb
+  ADXLibrary-FBAudienceNetwork: 2354dea1dc26d13a6d8d14d634fdd49221835e62
+  ADXLibrary-Pangle: 164ed8bae130dc57e045d6e21da7247f10e84edf
+  ADXLibrary-UnityAds: 6c19aa4235aa162fb2d2e37198e70e5d34324b49
+  ADXLibrary-Vungle: 95f8cc9f0f031a6dbc1942e9ac67e75468a7755c
+  Bytedance-UnionAD: e9f83939e2a5d857e104f6a91035bbf504b603e5
+  FBAudienceNetwork: 6e85fd17319e49c0234d60026bee154389badf2c
+  FBSDKCoreKit: ac6cc500b8e104bb9a4dd20b1527b5d199123c2e
+  Google-Mobile-Ads-SDK: 2f288748a42920d1c744946a460896a95b0e9110
+  GoogleAppMeasurement: 65a1071e5f52f63ab03d0a4d814a54fd762d885a
+  GoogleUserMessagingPlatform: b168e8c46cd8f92aa3e34b584c4ca78a411ce367
+  GoogleUtilities: d866834472f1324d080496bc67ab3ce5d0d46027
+  IronSourceSDK: 84e62e75f9d7c5e64510b6fcdaecd3d9be8e24a9
+  mopub-ios-sdk: a21098174b9420a291aca9fcdae832d0f2e2a368
+  nanopb: 59221d7f958fb711001e6a449489542d92ae113e
+  PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  UnityAds: 3f88cf3d3b11991de1025fcf0e3109fd86035fba
+  VungleSDK-iOS: 0405589c8626b2511dd57214a17e0d65e0d2f424
+
+PODFILE CHECKSUM: a92af2307c8d0db7589882cd17f38241f19c7a3a
+
+COCOAPODS: 1.10.1
