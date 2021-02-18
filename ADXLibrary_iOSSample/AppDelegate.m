@@ -29,8 +29,7 @@
         [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
 
             // 광고추적제한 설정 (페이스북 광고)
-            if (ATTrackingManager.trackingAuthorizationStatus == ATTrackingManagerAuthorizationStatusAuthorized ||
-               (ATTrackingManager.trackingAuthorizationStatus == ATTrackingManagerAuthorizationStatusNotDetermined)) {
+            if (ATTrackingManager.trackingAuthorizationStatus == ATTrackingManagerAuthorizationStatusAuthorized) {
                 [FBAdSettings setAdvertiserTrackingEnabled:YES];
             } else {
                 [FBAdSettings setAdvertiserTrackingEnabled:NO];
