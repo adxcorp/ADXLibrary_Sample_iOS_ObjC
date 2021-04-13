@@ -9,7 +9,7 @@
 #import "ADXRewardViewController.h"
 #import <MoPub.h>
 
-@interface ADXRewardViewController () <MPRewardedVideoDelegate>
+@interface ADXRewardViewController () <MPRewardedAdsDelegate>
 @end
 
 @implementation ADXRewardViewController
@@ -18,64 +18,64 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [MPRewardedVideo setDelegate:self forAdUnitId:REWARDEDVIDEO_AD_UNIT_ID];
-    [MPRewardedVideo loadRewardedVideoAdWithAdUnitID:REWARDEDVIDEO_AD_UNIT_ID withMediationSettings:nil];
+    [MPRewardedAds setDelegate:self forAdUnitId:REWARDEDVIDEO_AD_UNIT_ID];
+    [MPRewardedAds loadRewardedAdWithAdUnitID:REWARDEDVIDEO_AD_UNIT_ID withMediationSettings:nil];
     
 }
 
 - (IBAction)selectShowAd:(id)sender {
     
-    if ([MPRewardedVideo hasAdAvailableForAdUnitID:REWARDEDVIDEO_AD_UNIT_ID]) {
-        [MPRewardedVideo presentRewardedVideoAdForAdUnitID:REWARDEDVIDEO_AD_UNIT_ID fromViewController:self withReward:nil customData:nil];
+    if ([MPRewardedAds hasAdAvailableForAdUnitID:REWARDEDVIDEO_AD_UNIT_ID]) {
+        [MPRewardedAds presentRewardedAdForAdUnitID:REWARDEDVIDEO_AD_UNIT_ID fromViewController:self withReward:nil customData:nil];
     } else {
-        [MPRewardedVideo loadRewardedVideoAdWithAdUnitID:REWARDEDVIDEO_AD_UNIT_ID withMediationSettings:nil];
+        [MPRewardedAds loadRewardedAdWithAdUnitID:REWARDEDVIDEO_AD_UNIT_ID withMediationSettings:nil];
     }
 }
 
-#pragma mark - MPRewardedVideoDelegate
+#pragma mark - MPRewardedAdsDelegate
 
-- (void)rewardedVideoAdDidLoadForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"adUnitID : %@", adUnitID);
+- (void)rewardedAdDidLoadForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdDidLoadForAdUnitID : %@", adUnitID);
 }
 
-- (void)rewardedVideoAdDidFailToLoadForAdUnitID:(NSString *)adUnitID error:(NSError *)error {
-    NSLog(@"adUnitID : %@\nerror : %@", adUnitID, error.localizedDescription);
+- (void)rewardedAdDidFailToLoadForAdUnitID:(NSString *)adUnitID error:(NSError *)error {
+    NSLog(@"rewardedAdDidFailToLoadForAdUnitID : %@\nerror : %@", adUnitID, error.localizedDescription);
 }
 
-- (void)rewardedVideoAdDidExpireForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"adUnitID : %@", adUnitID);
+- (void)rewardedAdDidExpireForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdDidExpireForAdUnitID : %@", adUnitID);
 }
 
-- (void)rewardedVideoAdDidFailToPlayForAdUnitID:(NSString *)adUnitID error:(NSError *)error {
-    NSLog(@"adUnitID : %@\n error : %@", adUnitID, error.localizedDescription);
+- (void)rewardedAdDidFailToShowForAdUnitID:(NSString *)adUnitID error:(NSError *)error {
+    NSLog(@"rewardedAdDidFailToShowForAdUnitID : %@\n error : %@", adUnitID, error.localizedDescription);
 }
 
-- (void)rewardedVideoAdWillAppearForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"adUnitID : %@", adUnitID);
+- (void)rewardedAdWillPresentForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdWillPresentForAdUnitID : %@", adUnitID);
 }
 
-- (void)rewardedVideoAdDidAppearForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"adUnitID : %@", adUnitID);
+- (void)rewardedAdDidPresentForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdDidPresentForAdUnitID : %@", adUnitID);
 }
 
-- (void)rewardedVideoAdWillDisappearForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"adUnitID : %@", adUnitID);
+- (void)rewardedAdWillDismissForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdWillDismissForAdUnitID : %@", adUnitID);
 }
 
-- (void)rewardedVideoAdDidDisappearForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"adUnitID : %@", adUnitID);
+- (void)rewardedAdDidDismissForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdDidDismissForAdUnitID : %@", adUnitID);
 }
 
-- (void)rewardedVideoAdDidReceiveTapEventForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"adUnitID : %@", adUnitID);
+- (void)rewardedAdDidReceiveTapEventForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdDidReceiveTapEventForAdUnitID : %@", adUnitID);
 }
 
-- (void)rewardedVideoAdWillLeaveApplicationForAdUnitID:(NSString *)adUnitID {
-    NSLog(@"adUnitID : %@", adUnitID);
+- (void)rewardedAdWillLeaveApplicationForAdUnitID:(NSString *)adUnitID {
+    NSLog(@"rewardedAdWillLeaveApplicationForAdUnitID : %@", adUnitID);
 }
 
-- (void)rewardedVideoAdShouldRewardForAdUnitID:(NSString *)adUnitID reward:(MPRewardedVideoReward *)reward {
-    NSLog(@"adUnitID : %@\n reward : %@", adUnitID, reward.currencyType);
+- (void)rewardedAdShouldRewardForAdUnitID:(NSString *)adUnitID reward:(MPReward *)reward {
+    NSLog(@"rewardedAdShouldRewardForAdUnitID : %@\n reward : %@", adUnitID, reward.currencyType);
 }
 
 #pragma mark -

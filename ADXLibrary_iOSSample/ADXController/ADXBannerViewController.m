@@ -18,15 +18,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.adView = [[MPAdView alloc] initWithAdUnitId:BANNER_AD_UNIT_ID
-                                                size:MOPUB_BANNER_SIZE];
+    self.adView = [[MPAdView alloc] initWithAdUnitId:BANNER_AD_UNIT_ID];
     self.adView.delegate = self;
-    self.adView.frame = CGRectMake((self.view.bounds.size.width - MOPUB_BANNER_SIZE.width) / 2,
-                                   self.view.bounds.size.height - MOPUB_BANNER_SIZE.height,
-                                   MOPUB_BANNER_SIZE.width, MOPUB_BANNER_SIZE.height);
+    
+    CGSize bannerSize = CGSizeMake(UIScreen.mainScreen.bounds.size.width, kMPPresetMaxAdSize50Height.height);
+    self.adView.frame = CGRectMake((UIScreen.mainScreen.bounds.size.width - bannerSize.width) / 2,
+                                   UIScreen.mainScreen.bounds.size.height - bannerSize.height,
+                                   bannerSize.width, bannerSize.height);
     [self.view addSubview:self.adView];
     [self.adView loadAd];
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
     
+    CGSize bannerSise = [self.adView adContentViewSize];
+    CGFloat centeredX = (size.width - bannerSise.width) / 2;
+    CGFloat bottomAlignedY = size.height - bannerSise.height;
+    self.adView.frame = CGRectMake(centeredX, bottomAlignedY, bannerSise.width, bannerSise.height);
 }
 
 #pragma mark - <MPAdViewDelegate>
@@ -34,21 +43,12 @@
     return self;
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
-                                duration:(NSTimeInterval)duration {
-    [self.adView rotateToOrientation:toInterfaceOrientation];
+- (void)adViewDidLoadAd:(MPAdView *)view adSize:(CGSize)adSize {
+    NSLog(@"adViewDidLoadAd");
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    CGSize size = [self.adView adContentViewSize];
-    CGFloat centeredX = (self.view.bounds.size.width - size.width) / 2;
-    CGFloat bottomAlignedY = self.view.bounds.size.height - size.height;
-    self.adView.frame = CGRectMake(centeredX, bottomAlignedY, size.width, size.height);
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)adView:(MPAdView *)view didFailToLoadAdWithError:(NSError *)error {
+    NSLog(@"adViewDidFail");
 }
 
 @end

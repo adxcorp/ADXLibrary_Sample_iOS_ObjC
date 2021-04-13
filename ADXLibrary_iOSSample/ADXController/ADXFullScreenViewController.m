@@ -37,7 +37,7 @@
 - (void)interstitialDidLoadAd:(MPInterstitialAdController *)interstitial {
     [self.interstitial showFromViewController:self];
 }
-- (void)interstitialDidFailToLoadAd:(MPInterstitialAdController *)interstitial {
+- (void)interstitialDidFailToLoadAd:(MPInterstitialAdController *)interstitial withError:(NSError *)error {
 
 }
 - (void)interstitialWillAppear:(MPInterstitialAdController *)interstitial {
@@ -46,10 +46,10 @@
 - (void)interstitialDidAppear:(MPInterstitialAdController *)interstitial {
 
 }
-- (void)interstitialWillDisappear:(MPInterstitialAdController *)interstitial {
+- (void)interstitialWillDismiss:(MPInterstitialAdController *)interstitial {
 
 }
-- (void)interstitialDidDisappear:(MPInterstitialAdController *)interstitial {
+- (void)interstitialDidDismiss:(MPInterstitialAdController *)interstitial {
 
 }
 
