@@ -29,7 +29,7 @@
 - (void)createAndLoadRewardedAd {
     GADRequest *request = [GADRequest request];
     //*** GDPR
-    if ([ADXGDPR.sharedInstance getConsentState] == ADXConsentStateDenied) {
+    if ([[ADXGDPR sharedInstance] getConsentState] == ADXConsentStateDenied) {
         GADExtras *extras = [[GADExtras alloc] init];
         extras.additionalParameters = @{@"npa": @"1"};
         [request registerAdNetworkExtras:extras];
